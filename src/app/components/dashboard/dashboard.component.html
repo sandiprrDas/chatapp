@@ -1,0 +1,9 @@
+<div class="main main-container">
+  Deshboard
+    <ul class="list-group">
+      <li class="list-group-item" *ngFor="let hero of heros">{{liList}</li>
+    </ul>
+  </div>
+  <div *ngFor="let link of vedioList">
+      <a href="{{link.slug}}">{{link.name}}</a>
+  </div>
