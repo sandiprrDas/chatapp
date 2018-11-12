@@ -23,13 +23,17 @@ export class MessageComponent implements OnInit {
       this.ownEmail = user.email;
       this.isOwnMessage = this.ownEmail === this.userEmail;
     });
+    
   }
 
   ngOnInit(chatMessage = this.chatMessage) {
+    // alert(JSON.stringify(chatMessage = this.chatMessage))
     this.messageContent = chatMessage.message;
-    this.timeStamp = chatMessage.timeSent;
+    // this.timeStamp = chatMessage.timeSent;
     this.userEmail = chatMessage.email;
     this.userName = chatMessage.userName;
+    console.log(this.messageContent)
   }
+
 
 }

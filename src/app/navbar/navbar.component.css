@@ -2,19 +2,11 @@
     width: 100%;
     display: flex;
     flex-direction: row;
-    background-color: #EAEAEB;
+    background-color:#1cab8a;
 }
-
-#logo{
-    display: inline-block;
-    /* background: url('../../assets/img/logo.png') no-repeat; */
-    background-size: cover;
-    margin: 12px 10px 12px 32px;
-    width: 60px;
-    height: 60px;
-    min-width: 60px;
+#userEmail{
+    color:#fff;
 }
-
 #heading{
     flex: 4;
     padding: 24px 0px 8px 10px;
@@ -32,7 +24,8 @@
 
 #heading > a{
     text-decoration: none;
-    color: black;
+    color:#fff;
+    font-size: 20px
 }
 
 .links a{

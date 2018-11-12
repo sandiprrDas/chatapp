@@ -55,6 +55,7 @@ export class AuthService {
         displayName: displayName,
         status: status
       };
+      console.log(data)
 
       this.db.object(path).update(data)
         .catch(error => console.log(error));
@@ -62,12 +63,23 @@ export class AuthService {
 
     setUserStatus(status: string): void {
       const path = `users/${this.currentUserId}`;
-
       const data = {
         status: status
       };
-
       this.db.object(path).update(data)
         .catch(error => console.log(error));
     }
+    // get authenticated(): boolean {
+    //   return this.authState !== null;
+    // }
+  
+    // // Returns current user data
+    // get currentUser(): any {
+    //   return this.authenticated ? this.authState : null;
+    // }
+  
+    // // Returns
+    // get currentUserObservable(): any {
+    //   return this.afAuth.authState
+    // }
 }

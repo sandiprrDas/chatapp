@@ -52,3 +52,10 @@ app-chat-form{
   display: block;
   height: auto;
 }
+.userList{
+    width:290px;
+    background: #EDBB99;
+    margin-top:-10px;
+    padding-top: 15px;
+    height: calc(100vh + 10px);
+}

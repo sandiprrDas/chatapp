@@ -3,6 +3,7 @@ import {ChartService} from '../services/chart.service';
 import { Observable } from 'rxjs';
 import { ChatMessage } from '../models/chat-message.model';
 import { AngularFireDatabase,AngularFireList } from '@angular/fire/database';
+import {Pipe} from '@angular/core';
 
 
 
@@ -12,20 +13,18 @@ import { AngularFireDatabase,AngularFireList } from '@angular/fire/database';
   styleUrls: ['./feed.component.css']
 })
 export class FeedComponent implements OnInit, OnChanges{
-
-  feed: AngularFireList<ChatMessage[]>;
+  feed: AngularFireList<ChatMessage>;
   items: Observable<any[]>;
-  constructor(private chat: ChartService,private db: AngularFireDatabase) {
-    this.feed = db.list('messages');
-    this.items = this.feed.valueChanges();
-  }
-
+  constructor(private chat: ChartService,public db: AngularFireDatabase) { }
   ngOnInit() {
-    console.log("feed messages");
     this.feed = this.chat.getMessages();
+    this.items = this.db.list('messages').valueChanges();
+    // this.items =   this.db.list('items').valueChanges().subscribe(console.log);
   }
-  ngOnChanges(){
+  ngOnChanges() {
     this.feed = this.chat.getMessages();
-  }
+    this.items = this.db.list('messages').valueChanges();
 
+    // this.items = this.chat.getMessages();
+  }
 }

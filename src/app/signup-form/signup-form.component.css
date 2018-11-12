@@ -8,7 +8,6 @@
   
   .signUpCard{
     display: block;
-    border: 1px solid #000;
     border-radius: 4px;
     background-color: rgba(255,255,255,0.85);
     width: 700px;
@@ -72,4 +71,5 @@
   
   .label{
       font-size: 0.9em;
+      display: initial !important;
   }

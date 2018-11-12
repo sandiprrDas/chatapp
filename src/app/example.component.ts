@@ -10,6 +10,5 @@ export class ExampleComponent {
   title = 'Example';
 
   onClick(){
-    alert('hello');
   }
 }

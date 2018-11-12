@@ -9,13 +9,13 @@ import {ChartService} from '../services/chart.service'
 export class ChartFromComponent implements OnInit {
   message:string;
   constructor( private chart: ChartService ) { }
-  temp;
   ngOnInit() {
   }
   send(){
-    this.temp = this.chart.sendMessage(this.message);
+    this.chart.sendMessage(this.message);
     this.message='';
   }
+  
   handleSubmit(event){
     if(event.keyCode === 13){
       this.send();

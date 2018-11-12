@@ -1,5 +1,8 @@
 <div class="feed">
-  <div *ngFor="let message of items | async" class="message" name="message">
-    <app-message [chatMessage]=message></app-message>
-  </div>
+   <ul>
+      <li *ngFor="let message of items | async" class="message">
+        {{items.userName}}
+          <app-message [chatMessage]="message"></app-message>
+        </li>
+  </ul>
 </div>

@@ -14,8 +14,7 @@ export class ChartroomComponent implements OnInit {
   }
 
   scrollToBottom(): void {
-    this.feedContainer.nativeElement.scrollTop
-    = this.feedContainer.nativeElement.scrollHeight;
+    this.feedContainer.nativeElement.scrollTop = this.feedContainer.nativeElement.scrollHeight;
   }
 
   ngAfterViewChecked() {

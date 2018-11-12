@@ -3,10 +3,8 @@ import { NgModule } from '@angular/core';
 import { RouterModule} from '@angular/router'
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-
 import { AppComponent } from './app.component';
 import { CommonModule } from '@angular/common';
-import { appRoutes } from './routes';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireDatabaseModule } from '@angular/fire/database'
 import { AngularFireAuthModule } from '@angular/fire/auth'
@@ -32,6 +30,8 @@ import { UserListComponent } from './user-list/user-list.component';
 import { UserItemComponent } from './user-item/user-item.component';
 import { ChartService } from './services/chart.service';
 import { AuthService } from './services/auth.service';
+import { appRoutes } from './routes';
+
 import { environment } from '../environments/environment';
 
 @NgModule({
